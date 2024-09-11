@@ -1,0 +1,151 @@
+/* src/assets/css/custom.css */
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+#page, #content {
+  background: var(--bs-white);
+}
+body.boxed #page {
+  position: relative;
+  overflow-x: hidden;
+}
+#content[tabindex="-1"]:focus {
+  outline: 0;
+}
+.footer-social-link {
+  display: inline-block;
+  line-height: 3;
+  width: 55px;
+  height: 55px;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+  color: white;  
+  opacity: 0.5;
+}
+.footer-social-link > i, .footer-social-link > span {
+  color: white;
+}
+#footer-social-link-Fb {
+  background-color: #4267B2;
+}
+#footer-social-link-Insta {
+  background-color: #bc2a8d;
+}
+#footer-social-link-In {
+  background-color: #0077B5;
+}
+#footer-social-link-Be {
+  background-color: #1769ff;
+}
+#footer-social-link-Fr {
+  background-color: #1dbf73;
+}
+#footer-social-link-Up {
+  background-color: #6fda44;
+}
+.footer-social-link:hover {
+  opacity: 1;
+}
+.text-shadow-black {
+  text-shadow: #333 1px 0 7px;
+}
+.text-shadow-yellow {
+  text-shadow: #fad023 1px 0 7px;
+}
+.wa-chat-box-poweredby {
+  height: 0px;
+  width: 0px;
+  opacity: 0%;
+}
+.rowClient {
+  padding: 2em 0;
+  text-align: center;
+}
+.rowClient img {
+  width: 10em;
+}
+.bg1 {
+  background-image: url("./components/images-for-boxes/main-boxes/2danim.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.client-logos {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* for smooth scrolling on iOS */
+}
+
+.client-logos::-webkit-scrollbar {
+  display: none; /* hides the scrollbar in WebKit-based browsers */
+}
+
+.slide {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
+  margin-right: 1rem; /* space between logos */
+}
+
+.client-logos img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* src/assets/css/custom.css */
+
+/* Basic styles for header */
+.main-header {
+  position: relative;
+  width: 100%;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Make sure the header is on top of other elements */
+}
+
+.main-header.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navigation-wrapper {
+  transition: padding 3s ease;
+}
+
+.navigation-wrapper.sticky {
+  padding: 0px 0; /* Adjust padding when sticky */
+}
+
+.main-navigation-area {
+  transition: padding 0.3s ease;
+}
+
+.main-navigation-area.sticky {
+  padding: 10px 0; /* Adjust padding when sticky */
+}
+
+/* Mobile styles (if applicable) */
+.main-mobile-nav {
+  /* Add mobile-specific styles if needed */
+}
+
+/* Ensure navbar links transition smoothly */
+.navbar-area .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar-area .nav-link:hover {
+  color: #f0ad4e; /* Change the color on hover */
+}
+
+/* Optional: Styling for mobile menu toggle */
+.menu-collapsed {
+  background-color: transparent;
+  border: none;
+}
+

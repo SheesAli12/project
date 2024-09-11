@@ -1,0 +1,77 @@
+/* src/assets/css/custom.css */
+html {
+    scroll-behavior: smooth;
+    cursor: default;
+  }
+  #page, #content {
+    background: var(--bs-white);
+  }
+  body.boxed #page {
+    position: relative;
+    overflow-x: hidden;
+  }
+  #content[tabindex="-1"]:focus {
+    outline: 0;
+  }
+  .footer-social-link {
+    display: inline-block;
+    line-height: 3;
+    width: 55px;
+    height: 55px;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    color: white;  
+    opacity: 0.5;
+  }
+  .footer-social-link > i, .footer-social-link > span {
+    color: white;
+  }
+  #footer-social-link-Fb {
+    background-color: #4267B2;
+  }
+  #footer-social-link-Insta {
+    background-color: #bc2a8d;
+  }
+  #footer-social-link-In {
+    background-color: #0077B5;
+  }
+  #footer-social-link-Be {
+    background-color: #1769ff;
+  }
+  #footer-social-link-Fr {
+    background-color: #1dbf73;
+  }
+  #footer-social-link-Up {
+    background-color: #6fda44;
+  }
+  .footer-social-link:hover {
+    opacity: 1;
+  }
+  .text-shadow-black {
+    text-shadow: #333 1px 0 7px;
+  }
+  .text-shadow-yellow {
+    text-shadow: #fad023 1px 0 7px;
+  }
+  .wa-chat-box-poweredby {
+    height: 0px;
+    width: 0px;
+    opacity: 0%;
+  }
+  .rowClient {
+    padding: 2em 0;
+    text-align: center;
+  }
+  .rowClient img {
+    width: 10em;
+  }
+  .bg1 {
+    background-image: url("./components/images-for-boxes/main-boxes/2danim.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
