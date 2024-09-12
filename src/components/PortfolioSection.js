@@ -24,7 +24,7 @@ const PortfolioSection = () => {
                 <div className="cta-content mb-4">
                   <div className="heading-default wow fadeInUp">
                     <h2 className="text-black mb-5">
-                      About <span className="text-secondary text-shadow-black">Us</span>
+                      Little bit <span className="text-secondary text-shadow-black">About Us</span>
                     </h2>
                     <h4 className="text-secondary text-capitalize fw-bold">
                       Whether you're looking to restock your current inventory or are in the process of opening a new clinic, Cradle Care USA has you covered. We offer a wide range of medical, dental, and surgical equipment to meet your needs. Browse our catalog, and if you don't find what you're looking for, simply reach out via the "Contact Us" option, and we'll create a customized quote tailored specifically for you. Whatever your medical equipment needs, we've got it!
