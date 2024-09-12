@@ -96,7 +96,7 @@ const Header = () => {
                 <div className="main-mobile-menu">
                   <div className="mobile-logo">
                     <div className="logo figure">
-                      <a href="index.html" className="custom-logo-link" rel="home" aria-current="page">
+                      <a href="/#home" className="custom-logo-link" rel="home" aria-current="page">
                         <img src="/images/brand-logo/huzaif.png" className="image-main" height="80px" alt="Huzaif Mateen Logo" />
                         <img src="/images/brand-logo/huzaif-yellow.png" className="image-hover" height="80px" alt="Huzaif Mateen Logo" />
                       </a>

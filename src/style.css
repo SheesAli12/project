@@ -151,12 +151,12 @@ img {
 }
 .btn-primary:before,
 .btn-primary:after {
-    background-color: var(--bs-secondary);
+    background-color: var(--bs-black);
     
 }
 .btn-primary:hover,
 .btn-primary:active{
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 .scrolling-btn:before, .scrolling-btn:after{
     background-color: var(--bs-white);
@@ -2387,7 +2387,7 @@ input[type="reset"], input[type="submit"] {
 
 .design-item:hover a,
 .design-item:focus-within a {
-    color: var(--bs-primary);
+    color: var(--bs-white);
 }
 
 .design-icon {

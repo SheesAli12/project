@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '../style.css'; // For any custom styling
@@ -32,19 +32,30 @@ const pdfFiles = [
     { title: "Others 21", file: "/image/part2/21.pdf", category: "Others" },
 ];
 
+// Memoized PdfViewer component
+const PdfViewer = React.memo(({ file }) => (
+    <div className="pdf-viewer">
+        <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
+            <Viewer fileUrl={file} />
+        </Worker>
+    </div>
+));
 
 const OurCatalogues = () => {
     const [filter, setFilter] = useState('ALL'); // State to manage the selected filter
+
+    // Memoize filtered PDF files
+    const filteredPdfFiles = useMemo(() => 
+        filter === 'ALL'
+            ? pdfFiles
+            : pdfFiles.filter(pdf => pdf.category === filter),
+        [filter] // Recompute only when `filter` changes
+    );
 
     // Function to handle filter changes
     const handleFilterChange = (category) => {
         setFilter(category);
     };
-
-    // Filter PDF files based on the selected filter
-    const filteredPdfFiles = filter === 'ALL'
-        ? pdfFiles
-        : pdfFiles.filter(pdf => pdf.category === filter);
 
     return (
         <section id="catalogue" className="design-section py-5 bg-primary-light design-home">
@@ -84,11 +95,7 @@ const OurCatalogues = () => {
                                 {filteredPdfFiles.map((pdf, index) => (
                                     <div key={index} className="pdf-item">
                                         <h3 className="pdf-title">{pdf.title}</h3>
-                                        <div className="pdf-viewer">
-                                            <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.worker.min.js">
-                                                <Viewer fileUrl={pdf.file} />
-                                            </Worker>
-                                        </div>
+                                        <PdfViewer file={pdf.file} />
                                     </div>
                                 ))}
                             </div>
