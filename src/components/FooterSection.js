@@ -87,7 +87,7 @@ const FooterSection = () => {
         <div className="row py-2 justify-content-between">
           <div className="col-lg-4 col-md-6 d-flex align-items-center justify-content-center">
             <div className="logo figure">
-              <a href="index.html" className="d-inline-block">
+              <a href="/" className="d-inline-block">
                 <img src="./images/brand-logo/huzaif.png" alt="Huzaif Mateen-Logo" />
                 <img src="./images/brand-logo/huzaif-yellow.png" className="image-hover" height="80px" alt="Huzaif Mateen Logo" />
               </a>

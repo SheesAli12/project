@@ -1,7 +1,7 @@
 import React from 'react';
 import SliderSection from '../components/SliderSection';
 import PortfolioSection from '../components/PortfolioSection';
-import AboutUS from '../components/AboutUS';
+
 import ClientSection from '../components/ClientSection';
 import DesignSection from '../components/DesignSection';
 import FooterSection from '../components/FooterSection';

@@ -44,7 +44,7 @@ const Header = () => {
               <div className="row">
                 <div className="col-2 my-auto">
                   <div className="logo figure">
-                    <a href="index.html" className="custom-logo-link" rel="home" aria-current="page">
+                    <a href="/" className="custom-logo-link" rel="home" aria-current="page">
                       <img src="/images/brand-logo/huzaif.png" className="image-main" height="80px" alt="Huzaif Mateen Logo" />
                       <img src="/images/brand-logo/huzaif-yellow.png" className="image-hover" height="80px" alt="Huzaif Mateen Logo" />
                     </a>
@@ -68,7 +68,10 @@ const Header = () => {
                           <a title="Services" href="#about" className="nav-link">About Us</a>
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="Features" href="/#services" className="nav-link">Our Catalogue</a>
+                          <a title="Features" href="/#services" className="nav-link">Services</a>
+                        </li>
+                        <li className="menu-item nav-item">
+                          <a title="Features" href="/OurCatalogue" className="nav-link">Our Catalogue</a>
                         </li>
                         <li className="menu-item nav-item" style={{ borderLeft: '5px solid black', paddingLeft: '20px' }}>
                           <a title="Get a Quote" href="#quote" className="nav-link" style={{ color: 'white', fontWeight: 'bold' }}>

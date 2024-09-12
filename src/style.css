@@ -3299,4 +3299,47 @@ input[type="reset"], input[type="submit"] {
     border-color: var(--bs-secondary);
 }
 
+
+.catalogue-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.pdf-item {
+    width: 300px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.pdf-title {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pdf-viewer {
+    height: 300px;
+    overflow: auto;
+}
+.pdf-title {
+    transition: color 0.3s ease;
+}
+
+.pdf-title:hover {
+    color: #ff5733; /* Replace with your desired color */
+}
+.heading-default h2 {
+    transition: color 0.3s ease;
+}
+
+.heading-default h2:hover {
+    color: #ff5733; /* Replace with your desired hover color */
+}
+
 /*===== // =====*/

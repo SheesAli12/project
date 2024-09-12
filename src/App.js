@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home'; // Ensure this path is correct
 import AboutUs from './pages/AboutUs'; // Ensure this path is correct
+import OurCatalogue from './pages/OurCataloguepage'; // Ensure this path is correct
 
 const App = () => {
   return (
@@ -15,6 +16,8 @@ const App = () => {
         
         {/* About Us Route */}
         <Route path="/about" element={<AboutUs />} />
+                {/* About Us Route */}
+                <Route path="/OurCatalogue" element={<OurCatalogue />} />
       </Routes>
     </Router>
   );
