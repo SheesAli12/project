@@ -3342,4 +3342,61 @@ input[type="reset"], input[type="submit"] {
     color: #ff5733; /* Replace with your desired hover color */
 }
 
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.filter-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.filter-button.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.filter-button:hover {
+    background-color: #e0e0e0;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #e0e0e0;
+}
+
+.zoom-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.zoom-controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.zoom-controls button:hover {
+    background-color: #e0e0e0;
+}
 /*===== // =====*/
