@@ -65,7 +65,7 @@ const Header = () => {
                           <a title="Clients" href="/#client-section1" className="nav-link">Clients</a>
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="Services" href="#about" className="nav-link">About Us</a>
+                          <a title="Services" href="/#about" className="nav-link">About Us</a>
                         </li>
                         <li className="menu-item nav-item">
                           <a title="Features" href="/#services" className="nav-link">Services</a>
