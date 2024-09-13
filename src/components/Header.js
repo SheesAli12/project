@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+
 const Header = () => {
 
   useEffect(() => {
@@ -54,31 +55,30 @@ const Header = () => {
                   <nav className="navbar-area" id="navbar-area">
                     <div className="main-navbar">
                       <ul id="menu-navigation" className="main-menu nav">
-                      <li className="menu-item nav-item">
+                        <li className="menu-item nav-item">
                           <a title="home" href="/#home" className="nav-link">Home</a>
                         </li>
                         <li className="menu-item nav-item">
                           <a title="Contact" href="/#contact-section1" className="nav-link">Contact Us</a>
                         </li>
 
-                        <li className="menu-item nav-item">
+                        <li className="menu-item nav-item hide-on-mobile">
                           <a title="Clients" href="/#client-section1" className="nav-link">Clients</a>
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="Services" href="/#about" className="nav-link">About Us</a>
+                          <a title="About Us" href="/#about" className="nav-link">About Us</a>
+                        </li>
+                        <li className="menu-item nav-item hide-on-mobile">
+                          <a title="Services" href="/#services" className="nav-link">Services</a>
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="Features" href="/#services" className="nav-link">Services</a>
-                        </li>
-                        <li className="menu-item nav-item">
-                          <a title="Features" href="/OurCatalogue" className="nav-link">Our Catalogue</a>
+                          <a title="Catalogue" href="/OurCatalogue" className="nav-link">Our Catalogue</a>
                         </li>
                         <li className="menu-item nav-item" style={{ borderLeft: '5px solid black', paddingLeft: '20px' }}>
                           <a title="Get a Quote" href="#quote" className="nav-link" style={{ color: 'white', fontWeight: 'bold' }}>
                             Get a Free Quote! Contact Us Now
                           </a>
                         </li>
-                        
                       </ul>
                     </div>
                   </nav>
