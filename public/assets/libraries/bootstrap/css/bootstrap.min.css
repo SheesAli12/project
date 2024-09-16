@@ -2223,9 +2223,9 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #fde891;
+  border-color: #00291b;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -2389,9 +2389,9 @@ textarea.form-control-lg {
   }
 }
 .form-select:focus {
-  border-color: #fde891;
+  border-color: #00291b;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .form-select[multiple],
 .form-select[size]:not([size='1']) {
@@ -2454,9 +2454,9 @@ textarea.form-control-lg {
   filter: brightness(90%);
 }
 .form-check-input:focus {
-  border-color: #fde891;
+  border-color: #00291b;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .form-check-input:checked {
   background-color: #23b49d;
@@ -2535,10 +2535,10 @@ textarea.form-control-lg {
   outline: 0;
 }
 .form-range:focus::-webkit-slider-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .form-range:focus::-moz-range-thumb {
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .form-range::-moz-focus-outer {
   border: 0;
@@ -2984,7 +2984,7 @@ textarea.form-control.is-invalid {
 .btn-check:focus + .btn,
 .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 .btn:disabled,
 .btn.disabled,
@@ -4692,9 +4692,9 @@ fieldset:disabled .btn {
 }
 .accordion-button:focus {
   z-index: 3;
-  border-color: #fde891;
+  border-color: #00291b;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 
 .accordion-header {
@@ -4805,7 +4805,7 @@ fieldset:disabled .btn {
   color: #c8a61c;
   background-color: #e9ecef;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
 }
 
 .page-item:not(:first-child) .page-link {
@@ -5401,7 +5401,7 @@ fieldset:disabled .btn {
 }
 .btn-close:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(250, 208, 35, 0.25);
+  box-shadow: 0 0 0 0.25rem rgba(0, 41, 27, 0.25);
   opacity: 1;
 }
 .btn-close:disabled,

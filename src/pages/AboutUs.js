@@ -7,7 +7,7 @@ const AboutUs = () => {
   return (
     <div>
       {/* Include the Slider Section */}
-      <SliderSection title={'ABOUT US <br/>'} />
+      <SliderSection title={'ABOUT US <br/>'} shown={false} />
       {/* Include the Portfolio Section */}
       <AboutUS />
       {/* Include the Footer */}

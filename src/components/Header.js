@@ -130,14 +130,14 @@ const Header = () => {
                           )}
                         </li>
                         <li className="menu-item nav-item">
-                          <a
+                          <Link
                             title="Get a Quote"
-                            href="#quote"
+                            to="/contact-us"
                             className="nav-link"
                             style={{ color: 'white', fontWeight: 'bold' }}
                           >
                             Get a Free Quote! Contact Us Now
-                          </a>
+                          </Link>
                         </li>
                       </ul>
                     </div>

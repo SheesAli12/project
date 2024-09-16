@@ -184,17 +184,19 @@ const OurCatalogues = ({ category }) => {
         >
           <div
             style={{
-              width: 'auto',
+              width: '100%',
               height: '100vh',
               borderRadius: '10px',
               padding: '20px',
               position: 'relative',
               top: '50%',
-              //  center the modal horizontally so that it looks good on all devices
               left: '50%',
               transform: 'translate(-50%, -50%)',
-
               zIndex: 999999,
+              flex: 1,
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
             }}
           >
             <div
