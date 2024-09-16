@@ -1,39 +1,45 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+
+import './Header.css'
 
 const Header = () => {
+  const [isCatalogueOpen, setIsCatalogueOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       // Scroll Up logic
       if (window.scrollY > 200) {
-        document.querySelector('.scrollingUp').classList.add('is-active');
+        document.querySelector('.scrollingUp').classList.add('is-active')
       } else {
-        document.querySelector('.scrollingUp').classList.remove('is-active');
+        document.querySelector('.scrollingUp').classList.remove('is-active')
       }
 
       // Sticky Header logic
       if (window.scrollY >= 250) {
-        document.querySelector('.is-sticky-on').classList.add('is-sticky-menu');
+        document.querySelector('.is-sticky-on').classList.add('is-sticky-menu')
       } else {
-        document.querySelector('.is-sticky-on').classList.remove('is-sticky-menu');
+        document
+          .querySelector('.is-sticky-on')
+          .classList.remove('is-sticky-menu')
       }
-    };
+    }
 
     // Add scroll event listener
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     // Cleanup event listener on component unmount
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
-    });
-  };
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <header id="main-header" className="main-header">
@@ -44,11 +50,31 @@ const Header = () => {
             <div className="container">
               <div className="row">
                 <div className="col-2 my-auto">
-                  <div className="logo figure">
-                    <a href="/" className="custom-logo-link" rel="home" aria-current="page">
-                      <img src="/images/brand-logo/huzaif.png" className="image-main" height="80px" alt="Huzaif Mateen Logo" />
-                      <img src="/images/brand-logo/huzaif-yellow.png" className="image-hover" height="80px" alt="Huzaif Mateen Logo" />
-                    </a>
+                  <div
+                    className="logo figure"
+                    style={{
+                      padding: '3px',
+                    }}
+                  >
+                    <Link
+                      to="/"
+                      className="custom-logo-link"
+                      rel="home"
+                      aria-current="page"
+                    >
+                      <img
+                        src="/images/brand-logo/huzaif.png"
+                        className="image-main"
+                        height="80px"
+                        alt="Huzaif Mateen Logo"
+                      />
+                      <img
+                        src="/images/brand-logo/huzaif-yellow.png"
+                        className="image-hover"
+                        height="80px"
+                        alt="Huzaif Mateen Logo"
+                      />
+                    </Link>
                   </div>
                 </div>
                 <div className="col-10 my-auto">
@@ -56,26 +82,60 @@ const Header = () => {
                     <div className="main-navbar">
                       <ul id="menu-navigation" className="main-menu nav">
                         <li className="menu-item nav-item">
-                          <a title="home" href="/#home" className="nav-link">Home</a>
+                          <Link title="home" to="/#home" className="nav-link">
+                            Home
+                          </Link>
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="Contact" href="/#contact-section1" className="nav-link">Contact Us</a>
+                          <Link
+                            title="Contact"
+                            to="/contact-us"
+                            className="nav-link"
+                          >
+                            Contact Us
+                          </Link>
                         </li>
 
-                        <li className="menu-item nav-item hide-on-mobile">
-                          <a title="Clients" href="/#client-section1" className="nav-link">Clients</a>
+                        <li className="menu-item nav-item">
+                          <Link
+                            title="About Us"
+                            to="/about"
+                            className="nav-link"
+                          >
+                            About Us
+                          </Link>
+                        </li>
+
+                        <li
+                          className="menu-item nav-item"
+                          onMouseEnter={() => setIsCatalogueOpen(true)}
+                          onMouseLeave={() => setIsCatalogueOpen(false)}
+                        >
+                          <a title="Catalogue" href={'#'} className="nav-link">
+                            Our Catalogue
+                          </a>
+                          {isCatalogueOpen && (
+                            <ul className="submenu">
+                              <li>
+                                <Link to="/catalogue/dental-equipments">
+                                  Dental Equipment
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/catalogue/surgical-equipments">
+                                  Surgical Equipment
+                                </Link>
+                              </li>
+                            </ul>
+                          )}
                         </li>
                         <li className="menu-item nav-item">
-                          <a title="About Us" href="/#about" className="nav-link">About Us</a>
-                        </li>
-                        <li className="menu-item nav-item hide-on-mobile">
-                          <a title="Services" href="/#services" className="nav-link">Services</a>
-                        </li>
-                        <li className="menu-item nav-item">
-                          <a title="Catalogue" href="/OurCatalogue" className="nav-link">Our Catalogue</a>
-                        </li>
-                        <li className="menu-item nav-item" style={{ borderLeft: '5px solid black', paddingLeft: '20px' }}>
-                          <a title="Get a Quote" href="#quote" className="nav-link" style={{ color: 'white', fontWeight: 'bold' }}>
+                          <a
+                            title="Get a Quote"
+                            href="#quote"
+                            className="nav-link"
+                            style={{ color: 'white', fontWeight: 'bold' }}
+                          >
                             Get a Free Quote! Contact Us Now
                           </a>
                         </li>
@@ -96,15 +156,34 @@ const Header = () => {
                 <div className="main-mobile-menu">
                   <div className="mobile-logo">
                     <div className="logo figure">
-                      <a href="/#home" className="custom-logo-link" rel="home" aria-current="page">
-                        <img src="/images/brand-logo/huzaif.png" className="image-main" height="80px" alt="Huzaif Mateen Logo" />
-                        <img src="/images/brand-logo/huzaif-yellow.png" className="image-hover" height="80px" alt="Huzaif Mateen Logo" />
-                      </a>
+                      <Link
+                        to="/"
+                        className="custom-logo-link"
+                        rel="home"
+                        aria-current="page"
+                      >
+                        <img
+                          src="/images/brand-logo/huzaif.png"
+                          className="image-main"
+                          height="80px"
+                          alt="Huzaif Mateen Logo"
+                        />
+                        <img
+                          src="/images/brand-logo/huzaif-yellow.png"
+                          className="image-hover"
+                          height="80px"
+                          alt="Huzaif Mateen Logo"
+                        />
+                      </Link>
                     </div>
                   </div>
                   <div className="menu-collapse-wrap">
                     <div className="hamburger-menu">
-                      <button type="button" className="menu-collapsed" aria-label="Menu Collapsed">
+                      <button
+                        type="button"
+                        className="menu-collapsed"
+                        aria-label="Menu Collapsed"
+                      >
                         <div className="top-bun"></div>
                         <div className="meat"></div>
                         <div className="bottom-bun"></div>
@@ -113,7 +192,11 @@ const Header = () => {
                   </div>
                   <div className="main-mobile-wrapper">
                     <div id="mobile-menu-build" className="main-mobile-build">
-                      <button type="button" className="header-close-menu close-style" aria-label="Header Close Menu"></button>
+                      <button
+                        type="button"
+                        className="header-close-menu close-style"
+                        aria-label="Header Close Menu"
+                      ></button>
                     </div>
                     <div className="main-mobile-overlay" tabIndex="-1"></div>
                   </div>
@@ -129,7 +212,7 @@ const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

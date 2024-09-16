@@ -3,14 +3,15 @@ html {
   scroll-behavior: smooth;
   cursor: default;
 }
-#page, #content {
+#page,
+#content {
   background: var(--bs-white);
 }
 body.boxed #page {
   position: relative;
   overflow-x: hidden;
 }
-#content[tabindex="-1"]:focus {
+#content[tabindex='-1']:focus {
   outline: 0;
 }
 .footer-social-link {
@@ -22,20 +23,21 @@ body.boxed #page {
   text-align: center;
   text-decoration: none;
   margin: 5px;
-  color: white;  
+  color: white;
   opacity: 0.5;
 }
-.footer-social-link > i, .footer-social-link > span {
+.footer-social-link > i,
+.footer-social-link > span {
   color: white;
 }
 #footer-social-link-Fb {
-  background-color: #4267B2;
+  background-color: #4267b2;
 }
 #footer-social-link-Insta {
   background-color: #bc2a8d;
 }
 #footer-social-link-In {
-  background-color: #0077B5;
+  background-color: #0077b5;
 }
 #footer-social-link-Be {
   background-color: #1769ff;
@@ -53,7 +55,7 @@ body.boxed #page {
   text-shadow: #333 1px 0 7px;
 }
 .text-shadow-yellow {
-  text-shadow: #fad023 1px 0 7px;
+  text-shadow: #00291b 1px 0 7px;
 }
 .wa-chat-box-poweredby {
   height: 0px;
@@ -68,7 +70,7 @@ body.boxed #page {
   width: 10em;
 }
 .bg1 {
-  background-image: url("./components/images-for-boxes/main-boxes/2danim.png");
+  background-image: url('/public/images-for-boxes/main-boxes/2danim.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -148,4 +150,3 @@ body.boxed #page {
   background-color: transparent;
   border: none;
 }
-
