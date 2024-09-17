@@ -5,72 +5,72 @@ import '../style.css' // For any custom styling
 
 const pdfFiles = [
   {
-    title: 'Dental Equipment 1',
+    title: 'Dental Catalogue',
     file: '/image/part1/1.pdf',
     category: 'Dental Equipments',
   },
   {
-    title: 'Dental Equipment 2',
+    title: 'Dental Syringes',
     file: '/image/part1/2.pdf',
     category: 'Dental Equipments',
   },
   {
-    title: 'Dental Equipment 3',
+    title: 'Periodontal Instruments',
     file: '/image/part1/3.pdf',
     category: 'Dental Equipments',
   },
   {
-    title: 'Dental Equipment 4',
+    title: 'Orthodontic Pliers',
     file: '/image/part1/4.pdf',
     category: 'Dental Equipments',
   },
   {
-    title: 'Dental Equipment 5',
+    title: 'Diagnostic Instruments',
     file: '/image/part1/5.pdf',
     category: 'Dental Equipments',
   },
   {
-    title: 'Others 1',
+    title: 'Forceps',
     file: '/image/part2/1.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 2',
+    title: 'Tubing Clamp & Towel Clamps',
     file: '/image/part2/2.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 3',
+    title: 'Forceps Clamps',
     file: '/image/part2/3.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 4',
+    title: 'Suture Instruments',
     file: '/image/part2/4.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 5',
+    title: 'Retractors',
     file: '/image/part2/5.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 6',
+    title: 'Self-Retaining Retractors',
     file: '/image/part2/6.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 7',
+    title: 'Probes Trocars & Suction Tubes',
     file: '/image/part2/7.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 8',
+    title: 'GB Liver KUB',
     file: '/image/part2/8.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 9',
+    title: 'Gynecology Instruments',
     file: '/image/part2/9.pdf',
     category: 'Surgical Equipments',
   },
@@ -80,7 +80,7 @@ const pdfFiles = [
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 11',
+    title: 'Obstetrics Instruments',
     file: '/image/part2/11.pdf',
     category: 'Surgical Equipments',
   },
@@ -90,47 +90,47 @@ const pdfFiles = [
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 13',
+    title: 'Cardiovascular Surgery',
     file: '/image/part2/13.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 14',
+    title: 'Thorax Lung',
     file: '/image/part2/14.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 15',
+    title: 'Bone Surgery',
     file: '/image/part2/15.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 16',
+    title: 'Dressings',
     file: '/image/part2/16.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 17',
+    title: 'Neuro Surgery & Laminectomy',
     file: '/image/part2/17.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 18',
+    title: 'Tharacheostomy',
     file: '/image/part2/18.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 19',
+    title: 'Sterilization Miscellaneous',
     file: '/image/part2/19.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 20',
+    title: 'Preparation & Dermatology',
     file: '/image/part2/20.pdf',
     category: 'Surgical Equipments',
   },
   {
-    title: 'Others 21',
+    title: 'TC Scissors',
     file: '/image/part2/21.pdf',
     category: 'Surgical Equipments',
   },
@@ -219,7 +219,7 @@ const OurCatalogues = ({ category }) => {
               <Viewer
                 fileUrl={selectPdf.file}
                 viewMode="singlePage"
-                defaultScale="ActualSize"
+                defaultScale="PageWidth"
               />
             </Worker>
           </div>

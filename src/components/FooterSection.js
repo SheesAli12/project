@@ -12,7 +12,21 @@ const FooterSection = () => {
       <div className="container pt-4">
         <div className="row pt-4 border-bottom border-primary justify-content-between">
           {/* Contact Details */}
-          <div className="col-lg-4 col-md-6 col-12 mb-5 wow fadeInUp d-flex flex-column justify-content-center align-items-center">
+          <div className="col-lg-4 col-md-6 col-12 mb-5 wow fadeInUp d-flex flex-row justify-content-center align-items-center gap-5">
+            <div className="logo figure">
+              <a href="/" className="d-inline-block">
+                <img
+                  src="./images/brand-logo/huzaif.png"
+                  alt="Huzaif Mateen-Logo"
+                />
+                <img
+                  src="./images/brand-logo/huzaif-yellow.png"
+                  className="image-hover"
+                  height="80px"
+                  alt="Huzaif Mateen Logo"
+                />
+              </a>
+            </div>
             <div className="d-inline-flex flex-column">
               <div className="contact-area d-inline-flex align-items-center mb-3">
                 <div className="contact-icon">
@@ -46,10 +60,8 @@ const FooterSection = () => {
                 </div>
                 <div className="contact-info">
                   <p className="mb-0">
-                    <a href="mailto:hi@huzaifmateen.com">hi@huzaifmateen.com</a>
-                    <br />
-                    <a href="mailto:huzaifmateen990@gmail.com">
-                      huzaifmateen990@gmail.com
+                    <a href="mailto:support@cradlecare.us">
+                      support@cradlecare.us
                     </a>
                   </p>
                 </div>
@@ -144,23 +156,7 @@ const FooterSection = () => {
         </div>
 
         {/* Footer Logo */}
-        <div className="row py-2 justify-content-between">
-          <div className="col-lg-4 col-md-6 d-flex align-items-center justify-content-center">
-            <div className="logo figure">
-              <a href="/" className="d-inline-block">
-                <img
-                  src="./images/brand-logo/huzaif.png"
-                  alt="Huzaif Mateen-Logo"
-                />
-                <img
-                  src="./images/brand-logo/huzaif-yellow.png"
-                  className="image-hover"
-                  height="80px"
-                  alt="Huzaif Mateen Logo"
-                />
-              </a>
-            </div>
-          </div>
+        <div className="row py-2 justify-content-center">
           {/* Copyright */}
           <div className="col-lg-4 col-md-6 d-flex align-items-center justify-content-center">
             <p className="text-center">
@@ -179,13 +175,6 @@ const FooterSection = () => {
       >
         <i className="fa fa-angle-up"></i>
       </button>
-
-      {/* WhatsApp Contact
-      <div className="whatsapp-contact" style={{ position: 'fixed', width: '40px', height: '40px', bottom: '70px', right: '15px', cursor: 'pointer', zIndex: '9999' }}>
-        <a href="https://api.whatsapp.com/send?phone=13038476673" target="_blank" rel="noopener noreferrer">
-          <img src="./images/whatsapp.png" width="100%" alt="WhatsApp" />
-        </a>
-      </div> */}
     </footer>
   )
 }

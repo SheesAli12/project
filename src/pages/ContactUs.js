@@ -90,14 +90,14 @@ const ContactUs = () => {
 
   return (
     <div
-      className="container d-flex justify-content-center align-items-center"
-      style={{ height: '100vh' }}
+      className="container-fluid d-flex justify-content-center align-items-center client-section"
+      style={{ height: '100vh', backgroundColor: '#00291B' }}
     >
-      <div className="col-lg-6 col-md-8 col-sm-10 col-12">
+      <div className="col-lg-6 col-md-8 col-sm-10 col-12 p-4 border rounded shadow-lg">
         {/* Title and Subtitle */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 text-white">
           <h1>Contact Us</h1>
-          <p className="text-muted">
+          <p className="">
             We would love to hear from you. Please fill out the form below to
             get in touch.
           </p>
@@ -128,7 +128,7 @@ const ContactUs = () => {
         )}
 
         {/* Contact Form */}
-        <form className="p-4 border rounded shadow" onSubmit={handleSubmit}>
+        <form className="" onSubmit={handleSubmit}>
           <div className="form-group mb-3">
             <label htmlFor="name">Name</label>
             <input
@@ -192,6 +192,40 @@ const ContactUs = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div className="shape2">
+        <img src="/images/page-design-assets/clipart-2/1.png" alt="shape2" />
+      </div>
+      <div className="shape3">
+        <img src="/images/page-design-assets/clipart-2/2.png" alt="shape3" />
+      </div>
+      <div className="shape4">
+        <img src="/images/page-design-assets/clipart-2/3.png" alt="shape4" />
+      </div>
+      <div className="shape5">
+        <img src="/images/page-design-assets/clipart-2/3.png" alt="shape5" />
+      </div>
+      <div className="shape6">
+        <img src="/images/page-design-assets/clipart-2/2.png" alt="shape6" />
+      </div>
+      <div className="shape7">
+        <img src="/images/page-design-assets/clipart-2/1.png" alt="shape6" />
+      </div>
+      <div className="shape8">
+        <img src="/images/page-design-assets/clipart-2/1.png" alt="shape6" />
+      </div>
+      <div className="shape9">
+        <img src="/images/page-design-assets/clipart-2/3.png" alt="shape4" />
+      </div>
+      <div className="shape10">
+        <img src="/images/page-design-assets/clipart-2/1.png" alt="shape2" />
+      </div>
+
+      <div className="shape11">
+        <img src="/images/page-design-assets/clipart-2/3.png" alt="shape5" />
+      </div>
+      <div className="shape12">
+        <img src="/images/page-design-assets/clipart-2/3.png" alt="shape5" />
       </div>
     </div>
   )

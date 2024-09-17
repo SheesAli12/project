@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
-
+import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
+import useMediaQuery from './MediaQuery'
 
 const Header = () => {
   const [isCatalogueOpen, setIsCatalogueOpen] = useState(false)
+  const location = useLocation()
+  const isSmallScreen = useMediaQuery('(max-width: 600px)')
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,6 +41,10 @@ const Header = () => {
       top: 0,
       behavior: 'smooth',
     })
+  }
+
+  const isActive = (path) => {
+    return location.pathname === path ? 'active' : ''
   }
 
   return (
@@ -81,12 +87,16 @@ const Header = () => {
                   <nav className="navbar-area" id="navbar-area">
                     <div className="main-navbar">
                       <ul id="menu-navigation" className="main-menu nav">
-                        <li className="menu-item nav-item">
+                        <li className={`menu-item nav-item ${isActive('/')}`}>
                           <Link title="home" to="/#home" className="nav-link">
                             Home
                           </Link>
                         </li>
-                        <li className="menu-item nav-item">
+                        <li
+                          className={`menu-item nav-item ${isActive(
+                            '/contact-us',
+                          )}`}
+                        >
                           <Link
                             title="Contact"
                             to="/contact-us"
@@ -96,7 +106,9 @@ const Header = () => {
                           </Link>
                         </li>
 
-                        <li className="menu-item nav-item">
+                        <li
+                          className={`menu-item nav-item ${isActive('/about')}`}
+                        >
                           <Link
                             title="About Us"
                             to="/about"
@@ -129,14 +141,33 @@ const Header = () => {
                             </ul>
                           )}
                         </li>
-                        <li className="menu-item nav-item">
+                        {isSmallScreen && (
+                          <>
+                            <li className={`menu-item nav-item mx-3`}>
+                              <Link to="/catalogue/dental-equipments">
+                                Dental Equipment
+                              </Link>
+                            </li>
+                            <li className={`menu-item nav-item mx-3`}>
+                              <Link to="/catalogue/surgical-equipments">
+                                Surgical Equipment
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        <li
+                          className={`menu-item nav-item ${
+                            !isSmallScreen && 'x-3'
+                          }`}
+                          style={{ borderLeft: '2px solid white ' }}
+                        >
                           <Link
                             title="Get a Quote"
                             to="/contact-us"
                             className="nav-link"
                             style={{ color: 'white', fontWeight: 'bold' }}
                           >
-                            Get a Free Quote! Contact Us Now
+                            Get a Free Quote!
                           </Link>
                         </li>
                       </ul>

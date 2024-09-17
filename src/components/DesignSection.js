@@ -1,10 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const DesignSection = () => {
   return (
     <section
       id="services"
-      className="design-section py-5 bg-primary-light design-home"
+      className="design-section py-5 bg-primary-light design-home "
     >
       <div className="container pt-4">
         <div className="row pt-4">
@@ -42,7 +43,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Imports & exports</a>
+                      <Link to="/">Imports & exports</Link>
                     </strong>
                   </div>
                 </div>
@@ -60,7 +61,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Dental equipment supply</a>
+                      <Link to="/">Dental equipment supply</Link>
                     </strong>
                   </div>
                 </div>
@@ -78,7 +79,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Medical equipment</a>
+                      <Link to="/">Medical equipment</Link>
                     </strong>
                   </div>
                 </div>
@@ -96,7 +97,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Supply chain services</a>
+                      <Link to="/">Supply chain services</Link>
                     </strong>
                   </div>
                 </div>
@@ -114,7 +115,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Advertising</a>
+                      <Link to="/">Advertising</Link>
                     </strong>
                   </div>
                 </div>
@@ -132,7 +133,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Growth development</a>
+                      <Link to="/">Growth development</Link>
                     </strong>
                   </div>
                 </div>
@@ -150,7 +151,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Marketing services</a>
+                      <Link to="/">Marketing services</Link>
                     </strong>
                   </div>
                 </div>
@@ -168,7 +169,7 @@ const DesignSection = () => {
                   </div>
                   <div className="design-content">
                     <strong className="design-title">
-                      <a href="javacript:void()">Surgical equipment supply</a>
+                      <Link to="/">Surgical equipment supply</Link>
                     </strong>
                   </div>
                 </div>

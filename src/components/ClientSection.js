@@ -106,7 +106,15 @@ const ClientSection = () => {
               <div className="rowClient">
                 <section className="client-logos" ref={scrollRef}>
                   {slides.map((slide) => (
-                    <div key={slide.id} className="slide">
+                    <div
+                      key={slide.id}
+                      className="slide"
+                      style={{
+                        backgroundColor: 'white',
+                        padding: '10px',
+                        borderRadius: '10px',
+                      }}
+                    >
                       <img src={slide.image} alt={`Client ${slide.id}`} />
                     </div>
                   ))}
@@ -132,6 +140,12 @@ const ClientSection = () => {
       </div>
       <div className="shape5">
         <img src="/images/page-design-assets/clipart-2/3.png" alt="shape5" />
+      </div>
+      <div className="shape6">
+        <img src="/images/page-design-assets/clipart-2/2.png" alt="shape6" />
+      </div>
+      <div className="shape7">
+        <img src="/images/page-design-assets/clipart-2/1.png" alt="shape6" />
       </div>
     </section>
   )
