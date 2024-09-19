@@ -6,7 +6,23 @@ import useMediaQuery from './MediaQuery'
 const Header = () => {
   const [isCatalogueOpen, setIsCatalogueOpen] = useState(false)
   const location = useLocation()
-  const isSmallScreen = useMediaQuery('(max-width: 600px)')
+  const isSmallScreen = useMediaQuery('(max-width: 991px)')
+  const [openSideBar, setOpenSideBar] = useState(false)
+
+  useEffect(() => {
+    if (openSideBar) {
+      document.querySelector('body').classList.add('header-menu-active')
+      document.querySelector('body').classList.add('overlay-enabled')
+    } else {
+      document.querySelector('body').classList.remove('header-menu-active')
+      document.querySelector('body').classList.remove('overlay-enabled')
+    }
+
+    return () => {
+      document.querySelector('body').classList.remove('header-menu-active')
+      document.querySelector('body').classList.remove('overlay-enabled')
+    }
+  }, [openSideBar])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,7 +104,7 @@ const Header = () => {
                     <div className="main-navbar">
                       <ul id="menu-navigation" className="main-menu nav">
                         <li className={`menu-item nav-item ${isActive('/')}`}>
-                          <Link title="home" to="/#home" className="nav-link">
+                          <Link title="home" to="/" className="nav-link">
                             Home
                           </Link>
                         </li>
@@ -184,7 +200,10 @@ const Header = () => {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <div className="main-mobile-menu">
+                <div
+                  className="main-mobile-menu"
+                  onClick={() => setOpenSideBar(!openSideBar)}
+                >
                   <div className="mobile-logo">
                     <div className="logo figure">
                       <Link
@@ -212,7 +231,7 @@ const Header = () => {
                     <div className="hamburger-menu">
                       <button
                         type="button"
-                        className="menu-collapsed"
+                        className="menu-collapsed collapsed"
                         aria-label="Menu Collapsed"
                       >
                         <div className="top-bun"></div>
@@ -228,6 +247,91 @@ const Header = () => {
                         className="header-close-menu close-style"
                         aria-label="Header Close Menu"
                       ></button>
+                      <ul id="menu-navigation" className="main-menu nav">
+                        <li className={`menu-item nav-item ${isActive('/')}`}>
+                          <Link title="home" to="/" className="nav-link">
+                            Home
+                          </Link>
+                        </li>
+                        <li
+                          className={`menu-item nav-item ${isActive(
+                            '/contact-us',
+                          )}`}
+                        >
+                          <Link
+                            title="Contact"
+                            to="/contact-us"
+                            className="nav-link"
+                          >
+                            Contact Us
+                          </Link>
+                        </li>
+
+                        <li
+                          className={`menu-item nav-item ${isActive('/about')}`}
+                        >
+                          <Link
+                            title="About Us"
+                            to="/about"
+                            className="nav-link"
+                          >
+                            About Us
+                          </Link>
+                        </li>
+
+                        <li
+                          className="menu-item nav-item"
+                          onMouseEnter={() => setIsCatalogueOpen(true)}
+                          onMouseLeave={() => setIsCatalogueOpen(false)}
+                        >
+                          <Link title="Catalogue" className="nav-link">
+                            Our Catalogue
+                          </Link>
+                          {isCatalogueOpen && !isSmallScreen && (
+                            <ul className="submenu">
+                              <li>
+                                <Link to="/catalogue/dental-equipments">
+                                  Dental Equipment
+                                </Link>
+                              </li>
+                              <li>
+                                <Link to="/catalogue/surgical-equipments">
+                                  Surgical Equipment
+                                </Link>
+                              </li>
+                            </ul>
+                          )}
+                        </li>
+                        {isSmallScreen && (
+                          <>
+                            <li className={`menu-item nav-item mx-3`}>
+                              <Link to="/catalogue/dental-equipments">
+                                Dental Equipment
+                              </Link>
+                            </li>
+                            <li className={`menu-item nav-item mx-3`}>
+                              <Link to="/catalogue/surgical-equipments">
+                                Surgical Equipment
+                              </Link>
+                            </li>
+                          </>
+                        )}
+                        <li
+                          className={`menu-item nav-item ${
+                            !isSmallScreen && 'x-3'
+                          }`}
+                          style={{ borderLeft: '2px solid white ' }}
+                        >
+                          <Link
+                            title="Get a Quote"
+                            to="/contact-us"
+                            className="nav-link"
+                            style={{ color: 'white', fontWeight: 'bold' }}
+                          >
+                            Get a Free Quote!
+                          </Link>
+                        </li>
+                      </ul>
                     </div>
                     <div className="main-mobile-overlay" tabIndex="-1"></div>
                   </div>

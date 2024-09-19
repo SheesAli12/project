@@ -1,11 +1,6 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 const useMediaQuery = (query) => {
   const [matches, setMatches] = useState(false)
-
-  const updateMatches = useCallback(() => {
-    const match = window.matchMedia(query)
-    setMatches(match.matches)
-  }, [query])
 
   useEffect(() => {
     const match = window.matchMedia(query)

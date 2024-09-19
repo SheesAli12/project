@@ -2,15 +2,27 @@ import React, { useEffect } from 'react'
 
 const SliderSection = ({ title, shown = true }) => {
   useEffect(() => {
-    // Initialize Owl Carousel (if using a library like Owl Carousel)
-    if (window.$) {
-      window.$('.home-slider').owlCarousel({
-        items: 1,
-        loop: true,
-        autoplay: true,
-        autoplayTimeout: 5000,
-        autoplayHoverPause: true,
-      })
+    const initializeSlider = () => {
+      if (window.$) {
+        const slider = window?.$('.home-slider')
+
+        slider?.owlCarousel({
+          items: 1,
+          loop: true,
+          autoplay: true,
+          autoplayTimeout: 5000,
+          autoplayHoverPause: true,
+        })
+      }
+    }
+
+    // Delay initialization slightly to ensure the DOM is fully rendered
+    const timeoutId = setTimeout(initializeSlider, 1000)
+
+    // Cleanup function to destroy the OwlCarousel when component unmounts
+    return () => {
+      clearTimeout(timeoutId)
+      window?.$('.home-slider')?.trigger('destroy.owl.carousel')
     }
   }, [])
 

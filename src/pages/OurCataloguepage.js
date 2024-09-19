@@ -1,7 +1,6 @@
 import React from 'react'
 import SliderSection from '../components/SliderSection'
 import OurCatalogueSection from '../components/OurCatalogues'
-import FooterSection from '../components/FooterSection'
 import { useParams } from 'react-router-dom'
 
 const OurCataloguePage = () => {

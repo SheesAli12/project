@@ -28,9 +28,7 @@ const PortfolioSection = () => {
                   <div className="heading-default wow fadeInUp">
                     <h2 className="text-black mb-5">
                       Little bit{' '}
-                      <span className="text-secondary text-shadow-black">
-                        About Us
-                      </span>
+                      <span className="text-secondary">About Us</span>
                     </h2>
                     <h4 className="text-secondary">
                       Whether you're looking to restock your current inventory

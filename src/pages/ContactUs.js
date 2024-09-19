@@ -93,11 +93,11 @@ const ContactUs = () => {
       className="container-fluid d-flex justify-content-center align-items-center client-section"
       style={{ height: '100vh', backgroundColor: '#00291B' }}
     >
-      <div className="col-lg-6 col-md-8 col-sm-10 col-12 p-4 border rounded shadow-lg">
+      <div className="col-lg-6 col-md-8 col-sm-10 col-12 p-4 border rounded bg-white shadow-lg">
         {/* Title and Subtitle */}
-        <div className="text-center mb-4 text-white">
+        <div className="text-center mb-4 text-dark">
           <h1>Contact Us</h1>
-          <p className="">
+          <p className="text-muted">
             We would love to hear from you. Please fill out the form below to
             get in touch.
           </p>
@@ -130,7 +130,9 @@ const ContactUs = () => {
         {/* Contact Form */}
         <form className="" onSubmit={handleSubmit}>
           <div className="form-group mb-3">
-            <label htmlFor="name">Name</label>
+            <label className="text-dark" htmlFor="name ">
+              Name
+            </label>
             <input
               type="text"
               id="name"
@@ -144,7 +146,9 @@ const ContactUs = () => {
           </div>
 
           <div className="form-group mb-3">
-            <label htmlFor="email">Email</label>
+            <label className="text-dark" htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -158,7 +162,9 @@ const ContactUs = () => {
           </div>
 
           <div className="form-group mb-4">
-            <label htmlFor="message">Message</label>
+            <label className="text-dark" htmlFor="message">
+              Message
+            </label>
             <textarea
               id="message"
               className="form-control"

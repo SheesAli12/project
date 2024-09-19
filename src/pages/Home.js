@@ -4,7 +4,6 @@ import PortfolioSection from '../components/PortfolioSection'
 
 import ClientSection from '../components/ClientSection'
 import DesignSection from '../components/DesignSection'
-import FooterSection from '../components/FooterSection'
 
 const Home = () => {
   return (

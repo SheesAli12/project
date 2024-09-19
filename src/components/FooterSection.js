@@ -60,8 +60,8 @@ const FooterSection = () => {
                 </div>
                 <div className="contact-info">
                   <p className="mb-0">
-                    <a href="mailto:support@cradlecare.us">
-                      support@cradlecare.us
+                    <a href="mailto:cradlecare.us@gmail.com">
+                      cradlecare.us@gmail.com
                     </a>
                   </p>
                 </div>
@@ -146,6 +146,7 @@ const FooterSection = () => {
                 }}
               >
                 <iframe
+                  title="Aurora, Colorado Map"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d98371.70045049179!2d-104.83907481332041!3d39.60207741765204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876c8c62c40286d7%3A0x9a7dc840eeefc8a5!2sAurora%2C%20CO%2080016%2C%20USA!5e0!3m2!1sen!2s!4v1688422594558!5m2!1sen!2s"
                   width="300"
                   style={{ border: '0' }}

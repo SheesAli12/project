@@ -1,7 +1,6 @@
 import React from 'react'
 import SliderSection from '../components/SliderSection'
 import AboutUS from '../components/AboutUS'
-import FooterSection from '../components/FooterSection'
 
 const AboutUs = () => {
   return (

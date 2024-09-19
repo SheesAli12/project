@@ -64,7 +64,6 @@ const ClientSection = () => {
       if (scrollContainer) {
         const containerWidth = scrollContainer.scrollWidth / 2
         const scrollLeft = scrollContainer.scrollLeft
-        const containerClientWidth = scrollContainer.clientWidth
 
         // Reset scroll position to avoid jump
         if (scrollLeft >= containerWidth) {
