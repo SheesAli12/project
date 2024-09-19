@@ -1,5 +1,5 @@
 import React from 'react'
-import './bootstrap.min.css'
+import './css/bootstrap.min.css'
 import './style.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
